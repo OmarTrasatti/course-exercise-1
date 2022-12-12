@@ -3,6 +3,7 @@ package it.cineca.springbootbeginner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.core.env.AbstractEnvironment;
 
 import it.cineca.springbootbeginner.controller.ConstructorBasedController;
 import it.cineca.springbootbeginner.controller.MyController;
@@ -13,6 +14,8 @@ import it.cineca.springbootbeginner.controller.SetterBasedController;
 public class SpringbootbeginnerApplication {
 
 	public static void main(String[] args) {
+		System.setProperty(AbstractEnvironment.ACTIVE_PROFILES_PROPERTY_NAME, "it");
+	      
 		ConfigurableApplicationContext ctx =SpringApplication.run(SpringbootbeginnerApplication.class, args);
 		
 		
