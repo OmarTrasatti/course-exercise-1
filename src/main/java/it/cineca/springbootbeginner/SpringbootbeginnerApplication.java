@@ -6,6 +6,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 
 import it.cineca.controllers.ConstructorBasedController;
+import it.cineca.controllers.MyController;
 import it.cineca.controllers.PropertyBasedController;
 import it.cineca.controllers.SetterBasedController;
 
@@ -23,7 +24,10 @@ public class SpringbootbeginnerApplication {
 		System.out.println("Setter based: " + sbCont.getLog());
 		
 		PropertyBasedController pbCont = (PropertyBasedController) ctx.getBean("propertyBasedController");
-		System.out.print("Property based: " + pbCont.getLog());
+		System.out.println("Property based: " + pbCont.getLog());
+		
+		MyController myCont = (MyController) ctx.getBean("myController");
+		System.out.println("My Controller: " + myCont.getLog());
 	}
 
 }
