@@ -13,7 +13,6 @@ public class SetterBasedController {
 	@Autowired
 	public void setHelloWorldService(HelloWorldService service) {
 		this.myHelloWorldService = service;
-		System.out.println("SetterBasedController type");
 		
 	}
 	
